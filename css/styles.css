@@ -1,0 +1,12 @@
+:root {
+  --pastel-red: #f46169;
+  --peach-tellow: #fcdfa6;
+  --teal-deer: #98e0b8;
+  --light-pastel-purple: #b497d6;
+  --parrot-pink: #e4959e;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}

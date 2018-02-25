@@ -1,0 +1,159 @@
+.title-box {
+  align-items: center;
+  background: var(--purple);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+  padding: 4rem;
+  width: 100%;
+}
+
+.title {
+  color: #fff;
+  @include font(--font-serif, 3.6rem, 700);
+  line-height: 1;
+  text-align: center;
+}
+
+.user-search-box {
+  align-items: center;
+  background: var(--purple);
+  border-radius: 30px 30px 10px 10px;
+  border: 5px solid #fff;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  max-width: 100rem;
+  padding: 2rem;
+  width: 100%;
+}
+
+.user-search-label {
+  color: #fff;
+  @include font(--font-sans-serif, 1.8rem, 700);
+  margin-bottom: 1.5rem;
+}
+
+.user-search-input {
+  background: #fff;
+  border: none;
+  border-radius: 1rem;
+  color: #000;
+  font-family: var(--font-sans-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  outline: none;
+  padding: 1.5rem 2rem;
+  width: 100%;
+  &:focus {
+    box-shadow: 0 0 3pt 2pt var(--light-green);
+  }
+}
+
+.user-name {
+  border-bottom: 2px solid black;
+  color: #000;
+  @include font(--font-sans-serif, 3rem, 700);
+  margin-bottom: 1.5rem;
+}
+
+.user-profile-container {
+  align-items: center;
+  border: 5px solid #fff;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  padding: 2rem;
+}
+
+.user-picture {
+  border-radius: 1rem;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.user-profile-btn {
+  align-items: center;
+  background: var(--pastel-red);
+  border: none;
+  border-radius: 1rem;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  @include font(--font-sans-serif, 1.6rem, 400);
+  margin-bottom: 4rem;
+  padding: 1rem 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.fa-github {
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+
+.user-data-title {
+  color: #000;
+  @include font(--font-sans-serif, 2.1rem, 700);
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.user-data-container, .user-repo-container {
+  align-items: center;
+  border: 1px dashed #fff;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+.user-repo-container:last-child {
+  margin-bottom: 0;
+}
+
+.user-data-subtitle {
+  color: #000;
+  @include font(--font-sans-serif, 1.8rem, 700);
+  text-align: center;
+}
+
+.user-data {
+  color: #000;
+  @include font(--font-serif, 1.8rem, 400);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.user-data-box, .user-repo-box {
+  align-items: center;
+  background: var(--pastel-red);
+  border-radius: 1rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  @include font(--font-serif, 1.6rem, 400);
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+  width: 100%;
+  &:nth-child(9) {
+    margin-top: 2rem;
+  }
+  span {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-left: 0.5rem;
+  }
+}
+
+.user-repo-name {
+  color: #000;
+  @include font(--font-serif, 1.6rem, 700);
+}

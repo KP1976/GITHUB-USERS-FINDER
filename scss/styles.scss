@@ -20,6 +20,7 @@
 
 body {
   background: var(--light-green);
+  padding-bottom: 4rem;
 }
 
 .container {
@@ -27,12 +28,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 2rem 4rem;
+  padding: 0 2rem;
 }
 
 footer {
   color: #000;
   @include font(--font-serif, 1.4rem, 400);
+  text-align: center;
 }
 
 @import 'github';

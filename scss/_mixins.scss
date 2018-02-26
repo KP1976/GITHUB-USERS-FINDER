@@ -3,3 +3,27 @@
   font-size: $font-size;
   font-weight: $font-weight;
 }
+
+@mixin mq($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin boxes($bck-clr, $txt-clr) {
+  align-items: center;
+  background: $bck-clr;
+  border-radius: 1rem;
+  color: $txt-clr;
+  display: flex;
+  justify-content: center;
+  @include font(--font-serif, 1.6rem, 400);
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+  width: 100%;
+  span {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-left: 0.5rem;
+  }
+}

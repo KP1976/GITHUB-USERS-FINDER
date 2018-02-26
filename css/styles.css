@@ -16,6 +16,7 @@
 
 body {
   background: var(--light-green);
+  padding-bottom: 4rem;
 }
 
 .container {
@@ -32,7 +33,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 2rem 4rem;
+  padding: 0 2rem;
 }
 
 footer {
@@ -40,6 +41,7 @@ footer {
   font-family: var(--font-serif);
   font-size: 1.4rem;
   font-weight: 400;
+  text-align: center;
 }
 
 .title-box {
@@ -65,6 +67,12 @@ footer {
   font-weight: 700;
   line-height: 1;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 4.8rem;
+    line-height: 5.5rem;
+  }
 }
 
 .user-search-box {
@@ -94,6 +102,11 @@ footer {
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
+@media screen and (min-width: 768px) {
+  .user-search-label {
+    font-size: 2.2rem;
+  }
+}
 
 .user-search-input {
   background: #fff;
@@ -111,9 +124,14 @@ footer {
   -webkit-box-shadow: 0 0 3pt 2pt var(--light-green);
           box-shadow: 0 0 3pt 2pt var(--light-green);
 }
+@media screen and (min-width: 768px) {
+  .user-search-input {
+    font-size: 1.8rem;
+  }
+}
 
 .user-name {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #000;
   color: #000;
   font-family: var(--font-sans-serif);
   font-size: 3rem;
@@ -137,12 +155,57 @@ footer {
   margin-bottom: 4rem;
   padding: 2rem;
 }
+@media screen and (min-width: 480px) {
+  .user-profile-container {
+    max-width: 40rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .user-profile-container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2.5rem;
+    grid-gap: 2rem;
+    max-width: 100rem;
+  }
+}
+
+.user-img-wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 4rem;
+}
+@media screen and (min-width: 768px) {
+  .user-img-wrapper {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    margin-bottom: 0;
+  }
+}
 
 .user-picture {
   border-radius: 1rem;
   height: auto;
   max-width: 100%;
   margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .user-picture {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
 }
 
 .user-profile-btn {
@@ -163,7 +226,6 @@ footer {
   font-family: var(--font-sans-serif);
   font-size: 1.6rem;
   font-weight: 400;
-  margin-bottom: 4rem;
   padding: 1rem 0;
   text-decoration: none;
   text-transform: uppercase;
@@ -175,7 +237,7 @@ footer {
   margin-right: 1rem;
 }
 
-.user-data-title {
+.user-data-title, .user-repo-title {
   color: #000;
   font-family: var(--font-sans-serif);
   font-size: 2.1rem;
@@ -185,7 +247,24 @@ footer {
   text-transform: uppercase;
 }
 
-.user-data-container, .user-repo-container {
+@media screen and (min-width: 768px) {
+  .user-data-title {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .user-repo-title {
+    font-size: 3rem;
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    margin-bottom: 0;
+  }
+}
+
+.user-data-list {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -202,9 +281,36 @@ footer {
   padding: 2rem 1rem;
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .user-data-list {
+    border: 1px dashed #000;
+    display: grid;
+    grid-column: 2 / 3;
+    grid-column-gap: 2rem;
+    grid-row: 2 / 3;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    margin-bottom: 0;
+    padding: 0 2rem;
+  }
+}
 
-.user-repo-container:last-child {
+.user-data-items {
+  list-style-type: none;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.user-data-items:nth-child(4) {
   margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .user-data-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
 }
 
 .user-data-subtitle {
@@ -214,17 +320,28 @@ footer {
   font-weight: 700;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .user-data-subtitle {
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+}
 
 .user-data {
   color: #000;
+  display: block;
   font-family: var(--font-serif);
   font-size: 1.8rem;
   font-weight: 400;
-  margin-bottom: 1.5rem;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .user-data {
+    font-size: 2rem;
+  }
+}
 
-.user-data-box, .user-repo-box {
+.user-data-box {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -244,18 +361,102 @@ footer {
   padding: 1rem 0;
   width: 100%;
 }
-.user-data-box:nth-child(9), .user-repo-box:nth-child(9) {
-  margin-top: 2rem;
-}
-.user-data-box span, .user-repo-box span {
+.user-data-box span {
   font-size: 1.6rem;
   font-weight: 700;
   margin-left: 0.5rem;
 }
+@media screen and (min-width: 768px) {
+  .user-data-box {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+}
+
+.user-repo-list {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .user-repo-list {
+    grid-column: 1 / -1;
+  }
+}
+
+.user-repo-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--purple);
+  border: 1px dashed #fff;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 4rem;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+.user-repo-container:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .user-repo-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-template-columns: 1.5fr repeat(3, -webkit-max-content);
+    grid-template-columns: 1.5fr repeat(3, max-content);
+    padding: 2rem;
+  }
+}
+
+.user-repo-box {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  border-radius: 1rem;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+  width: 100%;
+}
+.user-repo-box span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .user-repo-box {
+    font-size: 1.8rem;
+    margin-top: 0;
+    padding: 1rem 2rem;
+  }
+}
 
 .user-repo-name {
-  color: #000;
+  color: #fff;
   font-family: var(--font-serif);
   font-size: 1.6rem;
   font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .user-repo-name {
+    font-size: 2.2rem;
+  }
 }

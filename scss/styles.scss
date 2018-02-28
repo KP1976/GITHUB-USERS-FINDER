@@ -20,14 +20,19 @@
 
 body {
   background: var(--light-green);
+  min-height: 100vh;
   padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .container {
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
   padding: 0 2rem;
 }
 

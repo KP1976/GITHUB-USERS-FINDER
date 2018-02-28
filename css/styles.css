@@ -16,7 +16,18 @@
 
 body {
   background: var(--light-green);
+  min-height: 100vh;
   padding-bottom: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .container {
@@ -30,9 +41,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 4rem;
   padding: 0 2rem;
 }
 
@@ -98,7 +110,7 @@ footer {
 .user-search-label {
   color: #fff;
   font-family: var(--font-sans-serif);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
@@ -130,13 +142,32 @@ footer {
   }
 }
 
+.alert-message {
+  background: var(--pastel-red);
+  border-radius: 1rem;
+  color: #fff;
+  font-family: var(--font-sans-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .alert-message {
+    font-size: 2.2rem;
+  }
+}
+
 .user-name {
-  border-bottom: 2px solid #000;
+  border-bottom: 1px solid #000;
   color: #000;
+  display: block;
   font-family: var(--font-sans-serif);
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .user-profile-container {
@@ -454,6 +485,7 @@ footer {
   font-family: var(--font-serif);
   font-size: 1.6rem;
   font-weight: 700;
+  text-decoration: none;
 }
 @media screen and (min-width: 768px) {
   .user-repo-name {
